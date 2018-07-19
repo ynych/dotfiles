@@ -1,0 +1,59 @@
+" set title
+" 自动加入头文件(新建时)
+autocmd BufNewFile *.[ch],*.py,*.go,*.md exec ":call SetTitle()" 
+
+" 手动加入头文件
+let mapleader = ';'
+nmap <leader>st :call SetTitle()<CR><Leader>		
+nmap <leader>sm :call SetMd()<CR><Leader>		
+nmap <leader>sp :call SetPython()<CR><Leader>		
+nmap <leader>sg :call SetGo()<CR><Leader>		
+
+
+func SetMd()
+    call append(0,"Title: ".expand('%:t:r'))
+    call append(1,"Date: ".strftime("%Y-%m-%d %H:%M:%S")) 
+    call append(2,"Category: ")
+    call append(3,"Tags: ")
+    call append(4,"Slug: ")
+    call append(5,"AUTHOR: Yan Yichao")
+    call append(6,"Summary: ") 
+    call append(7,"") 
+    call append(8,"-------------------------") 
+    call append(9,"") 
+endfunc
+
+func SetGo()
+    call append(0,"/**")
+    call append(1," * ================================================================") 
+    call append(2," *")
+    call append(3," *         FILE: ".expand('%:t:r'))
+    call append(4," *       AUTHOR: Yan Yichao")
+    call append(5," *        EMAIL: yanyichao.yyc@alibaba-inc.com")
+    call append(6," *      CREATED: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(7," * ================================================================") 
+    call append(8," **/") 
+endfunc
+
+func SetPython()
+    call append(0,"##")
+    call append(1," # ================================================================") 
+    call append(2," #         FILE: ".expand('%:t:r'))
+    call append(3," #       AUTHOR: Yan Yichao")
+    call append(4," #        EMAIL: yanyichao.yyc@alibaba-inc.com")
+    call append(5," #      CREATED: ".strftime("%Y-%m-%d %H:%M:%S"))
+    call append(6," #     REVISION:")
+    call append(7," # ================================================================") 
+    call append(8," ##") 
+endfunc
+
+" 定义函数SetTitle，自动插入文件头 
+func SetTitle()
+    if expand("%:e")  == 'py' 
+        call SetPython()
+    elseif expand("%:e") == 'go' 
+        call SetGo()
+    elseif expand("%:e") == 'md'
+        call SetMd()
+    endif
+endfunc

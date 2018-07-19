@@ -1,0 +1,50 @@
+export EDITOR=vim
+alias crontab "export VIM_CRONTAB=true; crontab"
+
+# 设定字符编码
+export LANG="zh_CN.UTF-8"
+export LC_CTYPE="zh_CN.UTF-8"
+export LC_NUMERIC="zh_CN.UTF-8"
+export LC_TIME="zh_CN.UTF-8"
+export LC_COLLATE="zh_CN.UTF-8"
+export LC_MONETARY="zh_CN.UTF-8"
+export LC_MESSAGES="zh_CN.UTF-8"
+export LC_PAPER="zh_CN.UTF-8"
+export LC_NAME="zh_CN.UTF-8"
+export LC_ADDRESS="zh_CN.UTF-8"
+export LC_TELEPHONE="zh_CN.UTF-8"
+export LC_MEASUREMENT="zh_CN.UTF-8"
+export LC_IDENTIFICATION="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+
+# *********************************************
+alias ll='ls -al'
+alias l='ls -l'
+# alias rm='trash-put'
+alias to-xmind="~/tools/to-xmind.sh"
+alias vim='/usr/local/bin/vim'
+
+LOGINX_HOME=$HOME'/tools/loginX'
+alias to="$LOGINX_HOME/login-machine/to.sh"
+alias tm="$LOGINX_HOME/login-mysql/tm.sh"
+
+alias updatedb="sudo /usr/libexec/locate.updatedb &"
+
+# java
+# /System/Library/Frameworks/JavaVM.framework/Versions/
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home'
+# export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home'
+# export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home'
+# export  JAVA_HOME=$HOME/tools/Java/jdk1.6.0_02
+# export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Versions/Current/Home'
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+
+# maven
+export MVN_HOME=$HOME'/tools/apache-maven-3.2.5/'
+alias mvn2="$HOME/tools/apache-maven-2.2.1/bin/mvn"
+alias mvn3="$HOME/tools/apache-maven-3.2.5/bin/mvn"
+export PATH=$MVN_HOME/bin:$PATH
+export MAVEN_OPTS='-Xms256m -Xmx1024m'
+

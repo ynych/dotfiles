@@ -1,0 +1,57 @@
+" Bundles here are part of the core Maximum Awesome setup
+" Do NOT add bundles to this list, as they might get removed when you upgrade
+" Maximum Awesome.
+" Please create ~/.vimrc.bundles.local and add any extra bundles you want there
+" :PluginInstall
+
+" bash
+Bundle 'vim-scripts/bash-support.vim'
+
+" tree
+Bundle 'scrooloose/nerdtree'
+
+" snips
+" Bundle 'SirVer/ultisnips'
+
+" Languages
+" Bundle 'sheerun/vim-polyglot'
+
+" YCM
+" Bundle 'Valloric/YouCompleteMe'
+
+" go
+" Bundle 'fatih/vim-go'
+" Bundle 'Blackrush/vim-gocode'
+" Bundle 'cespare/vim-golang'
+" Bundle 'dgryski/vim-godef'
+
+" python
+" Bundle 'vim-scripts/Pydiction'
+" Bundle 'nvie/vim-flake8'
+" Bundle 'vim-scripts/pylint.vim'
+" Bundle 'scrooloose/nerdtree'
+
+" markdown
+" Bundle 'godlygeek/tabular'
+" Bundle 'plasticboy/vim-markdown'
+
+" others
+" Bundle 'altercation/solarized'
+
+" source code
+" Bundle "SublimeText/CTags"
+
+" code auto-complete
+" Bundle "MarcWeber/vim-addon-mw-utils"
+" Bundle "tomtom/tlib_vim"
+" Bundle "garbas/vim-snipmate"
+" Bundle "honza/vim-snippets"
+" Bundle "scrooloose/syntastic"
+
+" Bundle "vim-scripts/SQLUtilities"
+" Bundle 'dolfly/plantuml'
+" Bundle 'https://github.com/dolfly/plantuml.git'
+" Bundle 'majutsushi/tagbar'
+" Bundle 'vim-airline/vim-airline'
+" Bundle 'vim-airline/vim-airline-themes'
+" Bundle 'kien/ctrlp.vim'

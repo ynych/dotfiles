@@ -1,0 +1,7 @@
+
+## alias
+alias ll='ls -al'
+alias l='ls -l'
+alias updatedb="/usr/libexec/locate.updatedb"
+
+
