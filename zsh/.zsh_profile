@@ -48,3 +48,9 @@ alias mvn3="$HOME/tools/apache-maven-3.2.5/bin/mvn"
 export PATH=$MVN_HOME/bin:$PATH
 export MAVEN_OPTS='-Xms256m -Xmx1024m'
 
+function jenv() {
+	/usr/libexec/java_home -V
+	echo "You can change java_home with:"
+	echo -e "\t/usr/libexec/java_home -v [version]"
+}
+DOCKER_OPTS="--registry-mirror=http://34cn42z3.mirror.aliyuncs.com"
